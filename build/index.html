@@ -23,9 +23,9 @@
   <body>
     <h1 class="header">StickHero</h1>
 
-    <div id="GameDiv" cc_exact_fit_screen="false" style="width: 1280px; height: 960px;">
+    <div id="GameDiv" cc_exact_fit_screen="false" style="width: 720px; height: 1280px;">
       <div id="Cocos3dGameContainer">
-        <canvas id="GameCanvas" width="1280" height="960" tabindex="99"></canvas>
+        <canvas id="GameCanvas" width="720" height="1280" tabindex="99"></canvas>
       </div>
     </div>
     <p class="footer">
@@ -33,14 +33,14 @@
     </p>
     <!-- Polyfills bundle. -->
 
-<script src="./src/polyfills.bundle.js" charset="utf-8"> </script>    
+<script src="src/polyfills.bundle.js" charset="utf-8"> </script>    
 
 
 <!-- SystemJS support. -->
-<script src="./src/system.bundle.js" charset="utf-8"> </script>
+<script src="src/system.bundle.js" charset="utf-8"> </script>
 
 <!-- Import map -->
-<script src="./src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+<script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
 
 <script>
     System.import('./index.js').catch(function(err) { console.error(err); })
