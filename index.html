@@ -42,7 +42,8 @@
 <!-- Import map -->
 <script src="./src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
 
-<script src="./index.js">
+<script>
+    System.import('./index.js').catch(function(err) { console.error(err); })
 </script>
   </body>
 </html>
