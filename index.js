@@ -1,22 +1,15 @@
-System.register(["./application.js"], function (_export, _context) {
+import Application from "./application.js";
+import cc from "cc";
 
-  var Application, application;
-  function topLevelImport(url) {
-    return System["import"](url);
+async function main() {
+  try {
+    const application = new Application();
+    const engine = await import(cc);
+    await application.init(engine);
+    await application.start();
+  } catch (err) {
+    console.error(err);
   }
-  return {
-    setters: [function (_applicationJs) {
-      Application = _applicationJs.Application;
-    }],
-    execute: function () {
-      application = new Application();
-      topLevelImport('cc').then(function (engine) {
-        return application.init(engine);
-      }).then(function () {
-        return application.start();
-      })["catch"](function (err) {
-        console.error(err);
-      });
-    }
-  };
-});
+}
+
+main();
